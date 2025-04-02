@@ -1,0 +1,106 @@
+body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 450px;
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 150, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1::before {
+    content: '🏏';
+    margin-right: 10px;
+    font-size: 32px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    background: #444;
+    box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00ff96;
+    color: #0a0a0a;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.calculate-btn:hover {
+    background: #00cc77;
+    transform: translateY(-3px);
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: left;
+    background: rgba(0, 255, 150, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.6;
+    display: none;
+}
+
+.loss {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4c4c;
+    text-align: center;
+    margin-top: 10px;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
